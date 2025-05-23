@@ -1,0 +1,8 @@
+<h1>My movie lists🎥🍿📋</h1>
+<ul class="list-group mb-2">
+  <% @lists.each do |list| %>
+    <li class="list-group-item"><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a new list", new_list_path %>
